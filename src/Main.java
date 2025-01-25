@@ -13,7 +13,11 @@ public class Main {
         System.out.println(fifthPanda);
         double sixthPanda = 44.4444444;
         System.out.println(sixthPanda);
-        float a = 27.12f;
+        char sevenPanda = 44444;
+        System.out.println(sevenPanda);
+        boolean eightPanda = true;
+        System.out.println(eightPanda);
+        double a = 27.12;
         long b = 987678965549L;
         float c = 2.786f;
         short d = 569;
