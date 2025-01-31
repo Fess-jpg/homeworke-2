@@ -1,84 +1,96 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
-        byte firstPanda = 14;
-        System.out.println(firstPanda);
-        short secondPanda = 14444;
-        System.out.println(secondPanda);
-        int thirdPanda = 44444;
-        System.out.println(thirdPanda);
-        long fourthPanda = 444444444;
-        System.out.println(fourthPanda);
-        float fifthPanda = 44.44f;
-        System.out.println(fifthPanda);
-        double sixthPanda = 44.4444444;
-        System.out.println(sixthPanda);
-        char sevenPanda = 44444;
-        System.out.println(sevenPanda);
-        boolean eightPanda = true;
-        System.out.println(eightPanda);
-        double a = 27.12;
-        long b = 987678965549L;
-        float c = 2.786f;
-        short d = 569;
-        short f = -159;
-        short j = 27897;
-        byte i = 67;
-        byte firstTeacher = 23;
-        byte secondTeacher = 27;
-        byte thirdTeacher = 30;
-        short paper = 480;
-        int students = firstTeacher + secondTeacher + thirdTeacher;
-        int oneStudent = paper / students;
-        System.out.println(" на каждого ученика расчитано " + oneStudent + " листов бумаги");
-        byte machine = 16;
-        byte time = 2;
-        byte timeA = 20;
-        int bottle = timeA / time * machine;
-        System.out.println(" за " + timeA + "мин машина произвела " + bottle + " штук бутылок");
-        short timeB = 1440;
-        int bottleB = timeB / time * machine;
-        System.out.println(" за " + timeB + "мин машина произвела " + bottleB + " штук бутылок");
-        int timeC = 4320;
-        int bottleC = timeC / time * machine;
-        System.out.println(" за " + timeC + "мин машина произвела " + bottleC + " штук бутылок");
-        int timeD = 44640;
-        int bottleD = timeD / time * machine;
-        System.out.println(" за " + timeD + "мин машина произвела " + bottleD + " штук бутылок");
-        byte cansPaint = 120;
-        byte whiteForOne = 2;
-        byte brownByOne = 4;
-        int totalClasses = cansPaint / (whiteForOne + brownByOne);
-        int white = totalClasses * whiteForOne;
-        int brown = totalClasses * brownByOne;
-        System.out.println("в школе, где " + totalClasses + " классов, нужно " + white + " банок белой краски, и " + brown + " банок коричневой краски.");
-        short bananas = 5 * 80;
-        short milk = 105 * 2;
-        short iseCream = 100 * 2;
-        short eggs = 70 * 4;
-        int weightGrams = bananas + milk + iseCream + eggs;
-        float weightKg = weightGrams / 1000F;
-        System.out.println("вес завтрака состовляет " + weightGrams + " грамм, или " + weightKg + " кг");
-        short needReset = 7000;
-        short weightLossA = 250;
-        short weightLossB = 500;
-        int firstOption = needReset / weightLossA;
-        int secondOption = needReset / weightLossB;
-        int middleOption = (firstOption + secondOption) / 2;
-        System.out.println(" если спортсмен будет терять каждый день по " + weightLossA + " грамм то похудеет за " + firstOption + " дней ,если по " + weightLossB + " то за " + secondOption + " дней. в среднем за " + middleOption + " день он справиться, если филонить не будет ");
-        int mashaSalary = 67760;
-        int denisSalary = 83690;
-        int kristinaSalary = 76230;
-        int newSalaryMasha = mashaSalary / 10 + mashaSalary;
-        int annualIncomeMashaGrown = mashaSalary / 10 * 12;
-        System.out.println(" маша теперь получает " + newSalaryMasha + " рублей. годовой доход вырос на " + annualIncomeMashaGrown + " рублей");
-        int newSalaryDenis = denisSalary / 10 + denisSalary;
-        int annualIncomeDenisGrown = denisSalary / 10 * 12;
-        System.out.println(" денис теперь получает " + newSalaryDenis + " рублей. годовой доход вырос на " + annualIncomeDenisGrown + " рублей");
-        int newSalaryKristina = kristinaSalary / 10 + kristinaSalary;
-        int annualIncomeKristinaGrown = kristinaSalary / 10 * 12;
-        System.out.println(" кристина теперь получает " + newSalaryKristina + " рублей. годовой доход вырос на " + annualIncomeKristinaGrown + " рублей");
-
+        // задание 1.
+        int age = 18;
+        if (age >= 18) {
+            System.out.println(" он совершеннолетний ");
+        } else {
+            System.out.println("он не совершеннолетний ");
+        }
+        /// задание 2
+        int airTemperature = 4;
+        if (airTemperature >= 5) {
+            System.out.println(" На улице тепло, можно идти без шапки ");
+        } else {
+            System.out.println(" на улице холодно, " + airTemperature +
+                    " гр., нужно одеть шапку");
+        }
+        /// задание 3
+        int speed = 71;
+        if (speed <= 60) {
+            System.out.println(" Можно ездить спокойно ");
+        } else {
+            System.out.println(" Если скорость " + speed + ", могут выписать штыф.");
+        }
+        /// задание 4
+        int yearsToMan = 7;
+        if (yearsToMan > 2 && yearsToMan < 6) {
+            System.out.println(" Если возраст человека равен " + yearsToMan +
+                    ", то ему нужно ходить в детский сад.");
+        } else {
+            System.out.println("Если человеку " + yearsToMan + ", то ему не место в детском саду");
+        }
+        int yearsToMan2 = 80;
+        if (yearsToMan2 > 7 && yearsToMan2 < 17) {
+            System.out.println(" Если возраст человека равен " + yearsToMan2 +
+                    ", то ему нужно ходить в школу. ");
+        } else {
+            System.out.println(" Если человеку " + yearsToMan2 + ", то ему не место в школе.");
+        }
+        int yearsToMan3 = 20;
+        if (yearsToMan3 >= 18 && yearsToMan3 <= 24) {
+            System.out.println(" Если человеку " + yearsToMan3 + ", то ему место в университете.");
+        } else {
+            System.out.println(" Если человеку" + yearsToMan3 + ", то ему не место в университете.");
+        }
+        int yearsToMan4 = 24;
+        if (yearsToMan4 >= 24) {
+            System.out.println(" Если человеку " + yearsToMan4 + ", то ему пора ходить на работу.");
+        } else {
+            System.out.println("Если человеку " + yearsToMan4 + ", то возможно ему еще рано ходить на работу.");
+        }
+        /// задание 5
+        int childAge = 4;
+        if (childAge < 5) ;
+        {
+            System.out.println(" Если возраст ребенка равен " + childAge + ", " +
+                    "то ему нельзя кататься на аттракционе.");
+        }
+        int childAge2 = 9;
+        if (childAge2 > 5 && childAge2 < 14) {
+            System.out.println(" Если возраст ребенка " + childAge2 +
+                    ", то он может кататься на аттракционе в сопровождение взрослого, " +
+                    "если взрослого нет, то нельзя.");
+        }
+        int childAge3 = 15;
+        if (childAge3 > 14) {
+            System.out.println(" Если возраст ребенка равен " + childAge3 + ", " +
+                    "то он может кататься на аттракционах без сопровождения взрослых.");
+        }
+        /// задание 6
+        int passengers = 77;
+        if (passengers < 60) {
+            System.out.println(" Есть сидячие места.");
+        } else if (passengers >= 60 && passengers < 102) {
+            System.out.println("Есть стоячие места.");
+        } else {
+            System.out.println("Мест нет");
+        }
+        /// задание 7
+        int one = 5;
+        int two = 10;
+        int three = 15;
+        if (one > two) {
+            System.out.println(" наибольшее число one ");
+        } else if (two > three) {
+            System.out.println(" наибольшее число two");
+        } else {
+            System.out.println(" наибольшее число three");
+        }
 
     }
 }
+
+
+
+
