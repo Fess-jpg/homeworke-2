@@ -38,8 +38,7 @@ public class Main {
         } else if (deliveryDistance <= 100) {
             deliveryTime += 3;
         }
-        {
-            System.out.println(" Потребуется дней: " + deliveryTime);
+        {System.out.println(" Потребуется дней: " + deliveryTime);
         }
         /// задание 5
         char monthNumber = 6;
