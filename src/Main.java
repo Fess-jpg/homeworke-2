@@ -2,22 +2,27 @@ public class Main {
     public static void main(String[] args) {
         // задание 1.
         int clientOS = 1;
-        if (clientOS == 1) {
-            System.out.println(" Установите версию Android по ссылке");
-        } else if (clientOS == 0) {
-            System.out.println("Установите версию IOS по ссылке");
+        if (clientOS == 0) {
+            System.out.println(" Установите версию IOS по ссылке");
+        } else {
+            System.out.println("Установите версию Android по ссылке");
         }
         /// задание 2
-        int clientDeviceYear = 2014;
+        int clientDeviceYear = 2016;
         int clientOS2 = 0;
-        if (clientOS2 == 1 && clientDeviceYear >= 2015) {
-            System.out.println("Установите версию Android по ссылке");
-        } else if (clientOS2 == 1 && clientDeviceYear < 2015) {
-            System.out.println(" Установите облегченную версию Android по ссылке");
-        } else if (clientOS2 == 0 && clientDeviceYear >= 2015) {
-            System.out.println("Установите версию IOS по ссылке");
-        } else if (clientOS2 == 0 && clientDeviceYear < 2015) {
-            System.out.println("установите облегченную версию IOS по ссылке");
+        if (clientOS2 == 0) {
+            if (clientDeviceYear < 2015) {
+                System.out.println("Установите облегченную версию для IOS по ссылке.");
+            } else {
+                System.out.println("Установите версию для IOS по ссылке.");
+            }
+        } else {
+            if (clientDeviceYear < 2015) {
+                System.out.println("Установите облегченную версию для Android по ссылке.");
+            } else {
+                System.out.println(" Установите версию для Android по ссылке.");
+
+            }
         }
         ///задание 3
         int year = 2024;
@@ -38,10 +43,11 @@ public class Main {
         } else if (deliveryDistance <= 100) {
             deliveryTime += 3;
         }
-        {System.out.println(" Потребуется дней: " + deliveryTime);
+        {
+            System.out.println(" Потребуется дней: " + deliveryTime);
         }
         /// задание 5
-        char monthNumber = 6;
+        char monthNumber = 68;
         switch (monthNumber) {
             case 1:
             case 2:
@@ -62,12 +68,16 @@ public class Main {
             case 10:
             case 11:
                 System.out.println("Осень");
-                break;
-            default:
-                System.out.println("Такого месяца нет.");
+                if (monthNumber < 1 || monthNumber > 12) {
+                    System.out.println("Некорректный номер месяца");
+                }
         }
     }
 }
+
+
+
+
 
 
 
