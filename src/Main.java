@@ -55,8 +55,9 @@ public class Main {
         System.out.println("задание 10");
         /// task 10
         int nam = 2;
-        for (int r = 1; r <= 10; r++){
-            System.out.println(nam + "*" + r + "=" + nam * r);}
+        for (int r = 1; r <= 10; r++) {
+            System.out.println(nam + "*" + r + "=" + nam * r);
+        }
     }
 }
 
