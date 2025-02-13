@@ -5,10 +5,10 @@ public class Main {
         int salary = 15000;
         int total = 0;
         int i = 1;
-        while (total < 2_456_000) {
+        while (total < 2_459_000) {
             i = i + 1;
             total = total + salary;
-            System.out.println(i + " месяц, сумма накоплений ровна " + total);
+            System.out.println(i + " месяц, сумма накоплений равна " + total);
         }
         System.out.println(" задание 2");
         /// task 2
@@ -71,11 +71,14 @@ public class Main {
         }
         System.out.println(" задание 7");
         /// task 7
+        int firstFriday =1;
         int date = 1;
-        while (date < 31) {
+        while (date <= 31) {
+            if ((date - firstFriday) % 7 == 0) {
+                System.out.println(" сегодня число " + date + "," +
+                        " пятница, необходимо подготовить отчет");
+            }
             date++;
-            if (date % 7 == 0)
-                System.out.println(" сегодня число " + date + ", пятница, необходимо подготовить отчет");
         }
         System.out.println(" задание 8 ");
         /// task 8
@@ -83,11 +86,11 @@ public class Main {
         int yearsLater = 2025 + 100;
         int years = 0;
         for (years = yearsEarlier; years < yearsLater; years++) {
-            if (years % 79 == 0)
-                System.out.println(years);
+            if (years % 79 == 0) {
+                System.out.println(years);}
+            }
         }
     }
-}
 
 
 
