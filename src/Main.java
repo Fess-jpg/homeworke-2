@@ -71,7 +71,7 @@ public class Main {
         }
         System.out.println(" задание 7");
         /// task 7
-        int firstFriday =1;
+        int firstFriday =7;
         int date = 1;
         while (date <= 31) {
             if ((date - firstFriday) % 7 == 0) {
