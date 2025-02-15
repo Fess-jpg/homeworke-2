@@ -1,65 +1,96 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println(" задание 1 ");
+        System.out.println("задание 1");
         /// task 1
-        for (int i = 1; i <= 10; i = i + 1) {
-            System.out.println(" итерация " + i);
+        int salary = 15000;
+        int total = 0;
+        int i = 1;
+        while (total < 2_459_000) {
+            i = i + 1;
+            total = total + salary;
+            System.out.println(i + " месяц, сумма накоплений равна " + total);
         }
-        System.out.println(" задание 2 ");
+        System.out.println(" задание 2");
         /// task 2
-        for (int y = 10; y >= 1; y = y - 1) {
-            System.out.println(" итерация " + y);
+        int g = 1;
+        while (g <= 10) {
+            System.out.print(g + " ");
+            g = g + 1;
         }
+        System.out.println();
+        for (int d = 10; d >= 1; d = d - 1)
+            System.out.print(d + " ");
+        System.out.println();
         System.out.println(" задание 3 ");
         /// task 3
-        for (int x = 2; x < 17; x = x + 2) {
-            System.out.println("итерация " + x);
+        int Y = 12_000_000;
+        int birth = 17;
+        int mortality = 8;
+        int on = 1000;
+        int year = 1;
+        while (year <= 10) {
+            Y = (birth - mortality) * on + Y;
+            System.out.println(" год " + year + ", численность населения состовляет " + Y);
+            year++;
         }
-        System.out.println(" задание 4");
+        System.out.println(" задание 4 ");
         /// task 4
-        for (int q = 10; q >= -10; q = q - 1) {
-            System.out.println(" итерация " + q);
+        int deposit = 15000;
+        int target = 0;
+        int month = 1;
+        while (target < 12_000_000) {
+            target = target + deposit;
+            target = target + target / 100 * 7;
+            System.out.println(" месяц " + month + ", сумма накоплений " + target);
+            month++;
         }
         System.out.println(" задание 5 ");
         /// task 5
-        for (int leanYear = 1904; leanYear <= 2096; leanYear = leanYear + 4) {
-            System.out.println(leanYear + "год является високосным");
+        int deposit1 = 15000;
+        int target1 = 0;
+        int month1 = 0;
+        while (target1 < 12_000_000) {
+            target1 = target1 + deposit1;
+            target1 = target1 + target1 / 100 * 7;
+            month1++;
+            if (month1 % 6 == 0) {
+                System.out.println(" месяц " + month1 + ", сумма накоплений " + target1);
+            }
         }
-        System.out.println("задание 6 ");
+        System.out.println(" задание 6 ");
         /// task 6
-        for (int a = 7; a <= 98; a = a + 7) {
-            System.out.println("итерация" + a);
+        int moon = 0;
+        int sum = 15000;
+        int common = 0;
+        while (moon < 108) {
+            common = common + sum;
+            common = common + common / 100 * 7;
+            moon++;
+            if (moon % 6 == 0) ;
+            System.out.println(" на " + moon + " месяц сумма накопления ровна " + common);
         }
-        System.out.println("задача 7");
+        System.out.println(" задание 7");
         /// task 7
-        for (int s = 1; s <= 512; s = s * 2) {
-            System.out.println("итерация" + s);
+        int firstFriday =7;
+        int date = 1;
+        while (date <= 31) {
+            if ((date - firstFriday) % 7 == 0) {
+                System.out.println(" сегодня число " + date + "," +
+                        " пятница, необходимо подготовить отчет");
+            }
+            date++;
         }
-        System.out.println(" задача 8");
+        System.out.println(" задание 8 ");
         /// task 8
-        int salary = 29000;
-        int total = 0;
-        for (int z = 1; z <= 12; z++) {
-            total = total + salary;
-            System.out.println(" в месяц " + z + ", сумма накоплений ровна " + total);
-        }
-        System.out.println("задание 9");
-        /// task 9
-        int salary1 = 29000;
-        int total1 = 0;
-        for (int z = 1; z <= 12; z++) {
-            total1 = total1 + total1 / 100;
-            total1 = total1 + salary1;
-            System.out.println(" в месяц " + z + ", сумма накоплений ровна " + total1);
-        }
-        System.out.println("задание 10");
-        /// task 10
-        int nam = 2;
-        for (int r = 1; r <= 10; r++) {
-            System.out.println(nam + "*" + r + "=" + nam * r);
+        int yearsEarlier = 2025 - 200;
+        int yearsLater = 2025 + 100;
+        int years = 0;
+        for (years = yearsEarlier; years < yearsLater; years++) {
+            if (years % 79 == 0) {
+                System.out.println(years);}
+            }
         }
     }
-}
 
 
 
