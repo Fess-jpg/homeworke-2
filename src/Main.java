@@ -27,7 +27,7 @@ public class Main {
                 minSpending = min;
             }
         }
-        System.out.println("Минимальная сумма затрат составила " + minSpending +" рублей");
+        System.out.println("Минимальная сумма затрат составила " + minSpending + " рублей");
         ///
         System.out.println("task 3");
         int[] exes = {2200, 4400, 3300, 1100, 5500};
