@@ -40,11 +40,19 @@ public class Main {
         ///
         System.out.println("task 4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length - 1; i >= 0; i--) {
-            System.out.print(reverseFullName[i]);
+        int start = 0;
+        int end = reverseFullName.length - 1;
+        while (start < end) {
+            char temp = reverseFullName[start];
+            reverseFullName[start] = reverseFullName[end];
+            reverseFullName[end] = temp;
+            start++;
+            end--;}
+            System.out.println(reverseFullName);
         }
     }
-}
+
+
 
 
 
