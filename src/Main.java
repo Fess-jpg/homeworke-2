@@ -2,67 +2,61 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        /// task 1
-        int[] bug = new int[3];
-        bug[0] = 1;
-        bug[1] = 2;
-        bug[2] = 3;
-        double[] worm = {1.57, 7.654, 9.986};
-        int[] fly = {4, 40, 44};
-        /// task 2
-        for (int i = 0; i < bug.length; i++) {
-            if (i < bug.length - 1) {
-                System.out.print(bug[i] + ", ");
-            } else {
-                System.out.print(bug[i]);
-                System.out.println();
-            }
-        }
         ///
-
-        for (int i1 = 0; i1 < worm.length; i1++) {
-            if (i1 < worm.length - 1) {
-                System.out.print(worm[i1] + ", ");
-            } else {
-                System.out.print(worm[i1]);
-                System.out.println();
-            }
+        System.out.println("task 1");
+        int[] expenses = {1100, 2200, 3300, 4400, 5500};
+        int sun = 0;
+        for (int expense : expenses) {
+            sun += expense;
         }
+        System.out.println(" сумма трат за месяц составила " + sun + " рублей");
         ///
-        for (int i2 = 0; i2 < fly.length; i2++) {
-            if (i2 < fly.length - 1) {
-                System.out.print(fly[i2] + ", ");
-            } else {
-                System.out.print(fly[i2]);
+        System.out.println("task 2");
+        int[] spending = {1100, 3300, 2200, 5500, 4400};
+        int maxSpending = spending[0];
+        for (final int max : spending) {
+            if (max > maxSpending) {
+                maxSpending = max;
             }
         }
-        System.out.println();
-        for (int r = bug.length - 1; r >= 0; r--) {
-            System.out.print(bug[r]);
-            if (r != 0) {
-                System.out.print(", ");
+        System.out.println("Максимальная сумма затрат составила " + maxSpending + " рублей.");
+        int minSpending = spending[0];
+        for (int i = 0; i < spending.length; i++) {
+            final int min = spending[i];
+            if (min < minSpending) {
+                minSpending = min;
             }
         }
-        System.out.println();
-        for (int q = worm.length - 1; q >= 0; q--) {
-            System.out.print(worm[q]);
-            if (q != 0) {
-                System.out.print(", ");
-            }
+        System.out.println("Минимальная сумма затрат составила " + minSpending + " рублей");
+        ///
+        System.out.println("task 3");
+        int[] exes = {2200, 4400, 3300, 1100, 5500};
+        int total = 0;
+        for (int exps : exes)
+            total += exps;
+        double middle = total / 5.0;
+        System.out.println("Средняя сумма трат за месяц составила "
+                + middle + " рублей.");
+        ///
+        System.out.println("task 4");
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        int start = 0;
+        int end = reverseFullName.length - 1;
+        while (start < end) {
+            char temp = reverseFullName[start];
+            reverseFullName[start] = reverseFullName[end];
+            reverseFullName[end] = temp;
+            start++;
+            end--;}
+            System.out.println(reverseFullName);
         }
-        System.out.println();
-        for (int z = fly.length - 1; z >= 0; z--) {
-            System.out.print(fly[z]);
-            if (z != 0) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println();
-        for (int i = 0; i < bug.length; i++) {
-            if (bug[i] % 2 != 0) {
-                bug[i] += 1;
-            }
-        }
-        System.out.println(Arrays.toString(bug));
     }
-}
+
+
+
+
+
+
+
+
+
