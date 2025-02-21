@@ -1,56 +1,80 @@
-import java.util.Arrays;
-
+import java.util.ArrayList;
+import java.time.LocalDate;
 public class Main {
-    public static void main(String[] args) {
-        ///
-        System.out.println("task 1");
-        int[] expenses = {1100, 2200, 3300, 4400, 5500};
-        int sun = 0;
-        for (int expense : expenses) {
-            sun += expense;
-        }
-        System.out.println(" сумма трат за месяц составила " + sun + " рублей");
-        ///
-        System.out.println("task 2");
-        int[] spending = {1100, 3300, 2200, 5500, 4400};
-        int maxSpending = spending[0];
-        for (final int max : spending) {
-            if (max > maxSpending) {
-                maxSpending = max;
-            }
-        }
-        System.out.println("Максимальная сумма затрат составила " + maxSpending + " рублей.");
-        int minSpending = spending[0];
-        for (int i = 0; i < spending.length; i++) {
-            final int min = spending[i];
-            if (min < minSpending) {
-                minSpending = min;
-            }
-        }
-        System.out.println("Минимальная сумма затрат составила " + minSpending + " рублей");
-        ///
-        System.out.println("task 3");
-        int[] exes = {2200, 4400, 3300, 1100, 5500};
-        int total = 0;
-        for (int exps : exes)
-            total += exps;
-        double middle = total / 5.0;
-        System.out.println("Средняя сумма трат за месяц составила "
-                + middle + " рублей.");
-        ///
-        System.out.println("task 4");
-        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        int start = 0;
-        int end = reverseFullName.length - 1;
-        while (start < end) {
-            char temp = reverseFullName[start];
-            reverseFullName[start] = reverseFullName[end];
-            reverseFullName[end] = temp;
-            start++;
-            end--;}
-            System.out.println(reverseFullName);
+    public static String checkLeapYear(int year) {
+        if ((year % 4 == 0) && year % 100 != 0 || year % 400 == 0) {
+            return year + " год високосный ";
+        } else {
+            return year + " год не високосный ";
         }
     }
+
+    ///
+    public static void printDownLoadCorrectApp(int clientDeviceYear, int phoneSystem) {
+        if (phoneSystem == 0) {
+            if (clientDeviceYear >= 2015) {
+                System.out.println(" Установите версию приложения для IOS по ссылке ");
+            } else {
+                System.out.println(" Установите облегченную версию приложения для IOS по ссылке ");
+            }
+        } else if (phoneSystem == 1) {
+            if (clientDeviceYear >= 2015) {
+                System.out.println(" Установите версию приложения для android ");
+            } else {
+                System.out.println(" Установите облегченную версию проложения для  android ");
+            }
+        }
+    }
+
+    ///
+    public static String deliveryDistance(int distance) {
+        int deliveryTime = 1;
+        int result = 0;
+        if (distance <= 0) {
+            return " Некоректное растояние ";
+        }
+        if (distance <= 20) {
+            result = deliveryTime;
+        } else if (distance <= 60) {
+            result = deliveryTime + 1;
+        } else if (distance <= 100) {
+            result = deliveryTime + 2;
+        } else {
+            return " доставки нет ";
+        }
+        {
+            return " Потребуется " + result + (result == 1 ? " день " : " дня");
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(" задание 1 ");
+        int year = 2024;
+        System.out.println(checkLeapYear(year));
+        System.out.println(" задание 2 ");
+        int phoneSystem = 1;
+        int clientDeviceYear = 2014;
+        printDownLoadCorrectApp(clientDeviceYear, phoneSystem);
+        System.out.println(" задание 3 ");
+        int distance = 95;
+        System.out.println(deliveryDistance(distance));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
