@@ -1,63 +1,23 @@
 import java.util.ArrayList;
 import java.time.LocalDate;
+
 public class Main {
-    public static String checkLeapYear(int year) {
-        if ((year % 4 == 0) && year % 100 != 0 || year % 400 == 0) {
-            return year + " год високосный ";
-        } else {
-            return year + " год не високосный ";
-        }
-    }
-
-    ///
-    public static void printDownLoadCorrectApp(int clientDeviceYear, int phoneSystem) {
-        if (phoneSystem == 0) {
-            if (clientDeviceYear >= 2015) {
-                System.out.println(" Установите версию приложения для IOS по ссылке ");
-            } else {
-                System.out.println(" Установите облегченную версию приложения для IOS по ссылке ");
-            }
-        } else if (phoneSystem == 1) {
-            if (clientDeviceYear >= 2015) {
-                System.out.println(" Установите версию приложения для android ");
-            } else {
-                System.out.println(" Установите облегченную версию проложения для  android ");
-            }
-        }
-    }
-
-    ///
-    public static String deliveryDistance(int distance) {
-        int deliveryTime = 1;
-        int result = 0;
-        if (distance <= 0) {
-            return " Некоректное растояние ";
-        }
-        if (distance <= 20) {
-            result = deliveryTime;
-        } else if (distance <= 60) {
-            result = deliveryTime + 1;
-        } else if (distance <= 100) {
-            result = deliveryTime + 2;
-        } else {
-            return " доставки нет ";
-        }
-        {
-            return " Потребуется " + result + (result == 1 ? " день " : " дня");
-        }
-    }
-
     public static void main(String[] args) {
-        System.out.println(" задание 1 ");
-        int year = 2024;
-        System.out.println(checkLeapYear(year));
-        System.out.println(" задание 2 ");
-        int phoneSystem = 1;
-        int clientDeviceYear = 2014;
-        printDownLoadCorrectApp(clientDeviceYear, phoneSystem);
-        System.out.println(" задание 3 ");
-        int distance = 95;
-        System.out.println(deliveryDistance(distance));
+        Author author = new Author("Ivan", "Ivanov");
+        Book book = new Book("BookX", author, 1990);
+        System.out.println("book.nameBook = " + book.getNameBook());
+        System.out.println("book.author = " + book.getAuthor());
+        System.out.println("book.getYearOfPublication() = " + book.getYearOfPublication());
+        book.setYearOfPublication(1992);
+        System.out.println("book.getYearOfPublication() = " + book.getYearOfPublication());
+
+        System.out.println("==========================");
+
+        Author author2 = new Author("Petr", "Petrov");
+        Book book2 = new Book("BookY", author2, 1991);
+        System.out.println("book2.getNameBook() = " + book2.getNameBook());
+        System.out.println("book2.getAuthor() = " + book2.getAuthor());
+        System.out.println("book2.getYearOfPublication() = " + book2.getYearOfPublication());
     }
 }
 
